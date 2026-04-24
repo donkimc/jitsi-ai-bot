@@ -2,10 +2,11 @@
   "name": "jitsi-ai-bot",
   "version": "1.0.0",
   "description": "An AI participant that joins your Jitsi English learning session, joins the conversation when called, and gently corrects grammar.",
-  "main": "src/bot.js",
+  "main": "src/server.js",
   "scripts": {
-    "start": "node src/bot.js",
-    "dev": "nodemon src/bot.js"
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "bot": "node src/bot.js"
   },
   "keywords": [
     "jitsi",

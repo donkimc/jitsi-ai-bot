@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jitsi AI Bot Control</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel hero">
+        <p class="eyebrow">Jitsi AI Bot</p>
+        <h1>Join a room from one simple control screen.</h1>
+        <p class="lede">
+          Enter the Jitsi room name, launch the bot, and manage the active session
+          without editing environment variables each time.
+        </p>
+      </section>
+
+      <section class="panel control">
+        <div class="status-row">
+          <div>
+            <p class="label">Current status</p>
+            <p id="status-badge" class="badge idle">Idle</p>
+          </div>
+          <div>
+            <p class="label">Jitsi server</p>
+            <p id="server-url" class="server-url">Loading...</p>
+          </div>
+        </div>
+
+        <form id="join-form" class="join-form">
+          <label for="room-name">Room name</label>
+          <div class="field-row">
+            <input
+              id="room-name"
+              name="roomName"
+              type="text"
+              placeholder="english-lesson-room"
+              autocomplete="off"
+              required
+            />
+            <button id="join-button" type="submit">Join Room</button>
+          </div>
+        </form>
+
+        <div class="actions">
+          <button id="leave-button" type="button" class="secondary">Leave Room</button>
+        </div>
+
+        <div class="message-box">
+          <p class="label">Session message</p>
+          <p id="session-message">Ready to join a Jitsi room.</p>
+        </div>
+
+        <div class="message-box">
+          <p class="label">Active room</p>
+          <p id="active-room">No room connected yet.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

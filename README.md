@@ -36,17 +36,34 @@ cp .env.example .env
 You need at minimum:
 - `GROQ_API_KEY` — from console.groq.com (for LLM and Whisper STT)
 
-### 3. Start the bot
+### 3. Start the web dashboard
 
 ```bash
 npm start
 ```
 
-The bot will:
+Then open:
+
+```bash
+http://localhost:3000
+```
+
+From the dashboard, you can:
+- Enter a Jitsi room name
+- Click **Join Room**
+- Leave the room without restarting the app
+
+When you join, the bot will:
 1. Launch a headless Chrome browser
 2. Join your Jitsi room as "Alex (AI Tutor)"
 3. Greet participants with a spoken welcome
 4. Listen and respond when called by name or when it detects grammar issues
+
+### Optional: Start the bot directly from the terminal
+
+```bash
+npm run bot
+```
 
 ## Trigger modes
 
@@ -75,7 +92,8 @@ Or edit the `DEFAULT_SYSTEM_PROMPT` function in `src/ai-brain.js`.
 | Browser Web Speech API (TTS) | Free |
 | **Total** | **~$0.15** |
 
-## Next steps (Step 2 & 3)
+## Next steps
 
-- Step 2: Improve audio capture using `AudioWorklet` inside the Puppeteer page
-- Step 3: Add a simple web dashboard to control the bot (start/stop, see transcripts)
+- Improve audio capture using `AudioWorklet` inside the Puppeteer page
+- Add transcript and event logs to the dashboard
+- Add deployment support for a frontend host plus a separate long-running bot worker
