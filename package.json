@@ -1,0 +1,30 @@
+{
+  "name": "jitsi-ai-bot",
+  "version": "1.0.0",
+  "description": "An AI participant that joins your Jitsi English learning session, joins the conversation when called, and gently corrects grammar.",
+  "main": "src/bot.js",
+  "scripts": {
+    "start": "node src/bot.js",
+    "dev": "nodemon src/bot.js"
+  },
+  "keywords": [
+    "jitsi",
+    "ai",
+    "english-tutor",
+    "bot",
+    "ai-participant"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "groq-sdk": "^0.4.0",
+    "puppeteer": "^22.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
